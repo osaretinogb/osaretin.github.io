@@ -1,170 +1,245 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Osaretin Ogbebor DA Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Osaretin Ogbebor’s data and machine learning portfolio. Case studies in solar forecasting, clustering, and SQL data preparation.">
+  <meta name="theme-color" content="#0d0e1a">
+  <title>Osaretin Ogbebor | Data &amp; Machine Learning</title>
+  <link rel="stylesheet" href="assets/portfolio/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="identity" href="#top" aria-label="Osaretin Ogbebor, home">
+        <span class="monogram" aria-hidden="true">OO</span>
+        <span>Osaretin Ogbebor</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#work">Projects</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <div class="hero" id="top">
+      <div class="shell hero-inner">
+        <div>
+          <p class="eyebrow">Data &amp; machine learning · Edmonton, AB</p>
+          <h1>I build data tools for <em>real decisions.</em></h1>
+          <p class="hero-copy">I’m Osaretin Ogbebor, a Machine Learning Analyst student at NorQuest College. I work with Python and SQL to make messy data usable and explain what the results mean for the people making decisions.</p>
+          <div class="actions">
+            <a class="button primary" href="#work">Explore my projects</a>
+            <a class="button secondary" href="https://github.com/osaretinogb">GitHub</a>
+          </div>
+        </div>
+        <aside class="spotlight" aria-labelledby="spotlight-title">
+          <div class="spotlight-top"><span class="signal" aria-hidden="true"></span> Work-integrated learning</div>
+          <div class="spotlight-art" aria-hidden="true">
+            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+            <div class="orbit orbit-three"></div><div class="orbit orbit-four"></div>
+            <div class="orbit-core"></div><div class="orbit-light"></div>
+          </div>
+          <div class="spotlight-bottom">
+            <h2 id="spotlight-title">Solar energy forecasting</h2>
+            <p>Preparing generation and weather data for community investment decisions.</p>
+            <a class="text-link" href="#solar">Read the capstone case study</a>
+          </div>
+        </aside>
+      </div>
+    </div>
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+    <section class="section shell" id="work" aria-labelledby="work-title">
+      <div class="section-heading">
+        <p class="eyebrow">Selected work</p>
+        <h2 id="work-title">Projects</h2>
+      </div>
+      <div class="project-index" aria-label="Selected projects">
+        <a href="#solar"><span class="project-kind">Capstone</span><strong>Solar energy forecasting</strong><span>Data validation for an investment dashboard</span></a>
+        <a href="#iris"><span class="project-kind">Machine learning</span><strong>Iris clustering</strong><span>Comparing ways to group flower measurements</span></a>
+        <a href="#housing"><span class="project-kind">Data analytics</span><strong>Nashville housing</strong><span>Cleaning property records in SQL Server</span></a>
+      </div>
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Osaretin Ogbebor<br />
-							Data Analysis<br />
-						Portfolio</h1>
-						<p>Data Analysis Skills in Excel, SQL, Tableau, Power BI and Python. <a href="https://www.instagram.com/osaretinglanda">@osaretinglanda</a></p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+      <article class="case-study" id="solar" aria-labelledby="solar-title">
+        <header class="case-heading">
+          <p class="eyebrow">NorQuest capstone · Team project</p>
+          <h3 id="solar-title">Solar energy forecasting</h3>
+          <p>Can a community energy team estimate how much electricity a proposed solar installation will generate before committing to an investment?</p>
+        </header>
+        <div class="case-layout">
+          <div class="case-story">
+            <section>
+              <h4>Business need &amp; stakeholder input</h4>
+              <p>Our client’s questionnaire responses and sample financial model pointed to electricity generation in kWh as a key input. The goal was an investment dashboard where staff or volunteers could compare historical generation with a forecast and use that estimate in their financial projections.</p>
+            </section>
+            <section>
+              <h4>My contribution &amp; progress</h4>
+              <p>I worked on the Python data loaders and helped evaluate public PVDAQ solar records. I checked what each energy column measured, how readings at different time intervals could be compared, and what we needed to join generation to weather. I helped explain why we chose a pilot dataset and what we still needed to verify before training.</p>
+            </section>
+            <section>
+              <h4>What I learned &amp; what I’d do next</h4>
+              <p>A system can have plenty of readings and still be a poor match for a proposed site. Capacity, weather and seasonal coverage can all affect how well a model transfers. I’d compare a regression model with a simple seasonal baseline on later months and show the forecast error alongside the prediction.</p>
+            </section>
+          </div>
+          <div class="case-evidence">
+            <figure class="evidence">
+              <h4>From raw readings to a forecast</h4>
+              <ol class="pipeline">
+                <li><strong>Check the inputs</strong><span>Generation records, weather and system details</span></li>
+                <li><strong>Align the measurements</strong><span>Compare units, time intervals and date coverage</span></li>
+                <li><strong>Build a baseline</strong><span>Prepare the joined data for a time-based evaluation</span></li>
+                <li><strong>Present the estimate</strong><span>Compare historical and forecast generation in kWh</span></li>
+              </ol>
+              <figcaption>Project workflow. The baseline and dashboard are the intended next stages.</figcaption>
+            </figure>
+            <p class="evidence-link"><a class="text-link" href="https://www.osti.gov/biblio/1846021">View the public PVDAQ data source</a></p>
+          </div>
+        </div>
+        <ul class="tools" aria-label="Tools and methods">
+          <li>Python</li><li>pandas</li><li>PVDAQ</li><li>Exploratory data analysis</li>
+        </ul>
+      </article>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Portfolio</a>
-					</header>
+      <article class="case-study" id="iris" aria-labelledby="iris-title">
+        <header class="case-heading">
+          <p class="eyebrow">Machine Learning II · Individual coursework</p>
+          <h3 id="iris-title">Iris clustering</h3>
+          <p>How well can clustering group flowers from their measurements when the algorithm has no species labels?</p>
+        </header>
+        <div class="case-layout">
+          <div class="case-story">
+            <section>
+              <h4>My experiment</h4>
+              <p>I compared K-Means on four flower measurements with agglomerative clustering on two principal components. PCA combines the original measurements into a smaller set of values so I can show the main patterns on a two-dimensional plot. I used species labels after clustering to help interpret the groupings.</p>
+            </section>
+            <section>
+              <h4>Result &amp; interpretation</h4>
+              <p>Setosa separated clearly in the two-dimensional view. Versicolor and virginica overlapped, which made it harder to draw a clear boundary between them. The PCA and agglomerative setup had a higher silhouette score in my coursework comparison. That score measures how tightly points group together and how far apart the groups are.</p>
+            </section>
+            <section>
+              <h4>What I’d do next</h4>
+              <p>I changed the algorithm and the input features in the same comparison. Next time I’d run both algorithms with and without PCA and score them in a common feature space. That would help me tell which change affected the result.</p>
+            </section>
+          </div>
+          <div class="case-evidence">
+            <figure class="evidence chart">
+              <h4>Where the species overlap</h4>
+              <img src="assets/portfolio/iris-projection.png" width="826" height="518" loading="lazy" alt="PCA scatterplot of 150 Iris flowers. Setosa forms a separate cluster on the left. Versicolor and virginica overlap in the middle and right.">
+              <figcaption>Two-component PCA projection of the public Iris dataset, coloured by known species to help interpret the feature space.</figcaption>
+            </figure>
+            <p class="evidence-link"><a class="text-link" href="https://archive.ics.uci.edu/dataset/53/iris">View the Iris dataset (Fisher, UCI, CC BY 4.0)</a></p>
+          </div>
+        </div>
+        <ul class="tools" aria-label="Tools and methods">
+          <li>Python</li><li>scikit-learn</li><li>PCA</li><li>K-Means</li><li>Agglomerative clustering</li>
+        </ul>
+      </article>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Projects</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/osaretin-ogbebor-117a4a26a/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://www.instagram.com/osaretinglanda" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="https://github.com/osaretinogb" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+      <article class="case-study" id="housing" aria-labelledby="housing-title">
+        <header class="case-heading">
+          <p class="eyebrow">Analytics · Independent project</p>
+          <h3 id="housing-title">Cleaning Nashville housing data</h3>
+          <p>Property data is harder to analyse when dates, addresses and vacancy values are inconsistent and the same sale may appear more than once.</p>
+        </header>
+        <div class="case-layout">
+          <div class="case-story">
+            <section>
+              <h4>My approach</h4>
+              <p>I wrote a SQL Server script that standardizes sale dates, fills missing property addresses using matching parcel IDs, splits address fields, and uses <code>ROW_NUMBER()</code> to remove repeated sale records.</p>
+            </section>
+            <section>
+              <h4>Result &amp; business value</h4>
+              <p>The script creates consistent fields for grouping sales by date or city. It also puts vacancy values into a consistent format so reports can count those records together.</p>
+            </section>
+            <section>
+              <h4>Data quality &amp; reflection</h4>
+              <p>A parcel can have more than one address in the source. On a production dataset I’d flag conflicting matches for review, log the rows I changed, and compare row counts before and after duplicate removal.</p>
+            </section>
+          </div>
+          <div class="case-evidence">
+            <figure class="evidence">
+              <h4>What the SQL changes</h4>
+              <table>
+                <thead><tr><th scope="col">Raw input</th><th scope="col">Cleaned output</th></tr></thead>
+                <tbody>
+                  <tr><td>Date and time</td><td>Sale date</td></tr>
+                  <tr><td>Y / N</td><td>Yes / No</td></tr>
+                  <tr><td>Combined property address</td><td>Street and city fields</td></tr>
+                  <tr><td>Repeated sale keys</td><td>One retained record per key</td></tr>
+                </tbody>
+              </table>
+              <figcaption>Examples of transformations in the public SQL script.</figcaption>
+            </figure>
+            <p class="evidence-link"><a class="text-link" href="https://github.com/osaretinogb/PortfolioProjects/blob/main/DataCleaningForNashvilleHousingDataSet.sql">Read the SQL script</a></p>
+          </div>
+        </div>
+        <ul class="tools" aria-label="Tools and methods">
+          <li>SQL Server</li><li>Self-joins</li><li>Window functions</li><li>Data cleaning</li>
+        </ul>
+      </article>
 
-				<!-- Main -->
-					<div id="main">
+      <details class="archive">
+        <summary>More analytics projects</summary>
+        <ul>
+          <li><a href="https://github.com/osaretinogb/PortfolioProjects/blob/main/SQLExplorationForCovid.sql">COVID-19 data exploration in SQL</a></li>
+          <li><a href="https://public.tableau.com/app/profile/osaretin.ogbebor/vizzes">Tableau visualizations</a></li>
+          <li><a href="https://github.com/osaretinogb/PortfolioProjects/blob/main/Data%20Survey%20Portfolio%20Project.pbix">Data survey project in Power BI</a></li>
+          <li><a href="https://github.com/osaretinogb/PortfolioProjects/blob/main/Amazon%20Web%20Scraper%20Project.ipynb">Amazon price tracking with Python</a></li>
+          <li><a href="https://github.com/osaretinogb/PortfolioProjects/blob/main/Automate%20API%20Extraction%20%2B%20Appending%20Data%20%2B%20Extra%20--%20Project.ipynb">Automated crypto API data collection</a></li>
+        </ul>
+      </details>
+    </section>
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<h2><a href="https://github.com/osaretinogb/PortfolioProjects/blob/main/DataCleaningForNashvilleHousingDataSet.sql">DATA CLEANING IN SQL</h2>
-									<p>Raw housing data is taken from the Web and transformed
-										in SQL Server to make it more usable for analysis.</p>
-								</header>
-								<a href="https://github.com/osaretinogb/PortfolioProjects/blob/main/DataCleaningForNashvilleHousingDataSet.sql" class="image main"><img src="images/Housing.jpg" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://github.com/osaretinogb/PortfolioProjects/blob/main/DataCleaningForNashvilleHousingDataSet.sql" class="button large">View Project</a></li>
-								</ul>
-							</article>
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="shell about-layout">
+        <div>
+          <p class="eyebrow">About me</p>
+          <h2 id="about-title">How I got here</h2>
+          <p>I studied computer science and worked in data analysis and technical support before starting the Machine Learning Analyst diploma at NorQuest College. As an instructional assistant in Accessibility Services, I’ve learned how much the way you explain something matters. I bring that lesson to data work by showing how I got to a result and what someone can do with it.</p>
+          <p>I also produce music as Sol Dre. The blue and purple of this site come from my studio branding.</p>
+        </div>
+        <div class="career">
+          <h3>Where I want to go</h3>
+          <p>I’m interested in data and machine learning analyst roles where I can work on a business question from the first conversation to the tools people use. I want to get better at building Python APIs, deploying models and monitoring how they perform after launch.</p>
+        </div>
+      </div>
+    </section>
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<h2><a href="https://github.com/osaretinogb/PortfolioProjects/blob/main/SQLExplorationForCovid.sql">Data Exploration in SQL</a></h2>
-									</header>
-									<a href="https://github.com/osaretinogb/PortfolioProjects/blob/main/SQLExplorationForCovid.sql" class="image fit"><img src="images/Covid.jpg" alt="" /></a>
-									<p>In this project, online Covid Dataset was downloaded and explored for data analysis. </p>
-									<ul class="actions special">
-										<li><a href="https://github.com/osaretinogb/PortfolioProjects/blob/main/SQLExplorationForCovid.sql" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://public.tableau.com/app/profile/osaretin.ogbebor/vizzes">Tableau Projects</a></h2>
-									</header>
-									<a href="https://public.tableau.com/app/profile/osaretin.ogbebor/vizzes" class="image fit"><img src="images/Visualization.jpg" alt="" /></a>
-									<p>These are all of my tableau viualization located on my dashboard</p>
-									<ul class="actions special">
-										<li><a href="https://public.tableau.com/app/profile/osaretin.ogbebor/vizzes" class="button">View Dashboard</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://github.com/osaretinogb/PortfolioProjects/raw/main/Data%20Survey%20Portfolio%20Project.pbix">Power BI Project</a></h2>
-									</header>
-									<a href="https://github.com/osaretinogb/PortfolioProjects/raw/main/Data%20Survey%20Portfolio%20Project.pbix" class="image fit"><img src="images/PowerBI.jpg" alt="" /></a>
-									<p>This is a download link to a housing project explored and visualized in Power BI.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/osaretinogb/PortfolioProjects/raw/main/Data%20Survey%20Portfolio%20Project.pbix" class="button">Download Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://github.com/osaretinogb/PortfolioProjects/blob/main/Amazon%20Web%20Scraper%20Project.ipynb">Amazon Web Scraper Project in Python</a></h2>
-									</header>
-									<a href="https://github.com/osaretinogb/PortfolioProjects/blob/main/Amazon%20Web%20Scraper%20Project.ipynb" class="image fit"><img src="images/AmazonWeb.jpg" alt="" /></a>
-									<p>In this project, Data from Amazon Web is scraped and used as a dataset with live updating in the case of changes in prices.<br />
-									The programming language used is Python</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/osaretinogb/PortfolioProjects/blob/main/Amazon%20Web%20Scraper%20Project.ipynb" class="button">View Code</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://github.com/osaretinogb/PortfolioProjects/blob/main/Automate%20API%20Extraction%20%2B%20Appending%20Data%20%2B%20Extra%20--%20Project.ipynb">Automating Crypto Website API Pull Using Python</a></h2>
-									</header>
-									<a href="https://github.com/osaretinogb/PortfolioProjects/blob/main/Automate%20API%20Extraction%20%2B%20Appending%20Data%20%2B%20Extra%20--%20Project.ipynb" class="image fit"><img src="images/Crypto.jpg" alt="" /></a>
-									<p>In this project, I automate this API pull as well as clean up the data. Then I create a Visualizations.
-									</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/osaretinogb/PortfolioProjects/blob/main/Automate%20API%20Extraction%20%2B%20Appending%20Data%20%2B%20Extra%20--%20Project.ipynb" class="button">View Code</a></li>
-									</ul>
-								</article>
-							</section>
-
-						<!-- Footer -->
-						
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-				
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>Airdrie, Alberta<br />
-								Canada.</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(825) 288-9525</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">osaretincontact@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="https://www.linkedin.com/in/osaretin-ogbebor-117a4a26a/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://www.instagram.com/osaretinglanda" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="https://github.com/osaretinogb" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Osaretin Ogbebor</li><li>2023</a></li></ul>
-					</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <section class="section shell" id="skills" aria-labelledby="skills-title">
+      <div class="section-heading">
+        <p class="eyebrow">Skills</p>
+        <h2 id="skills-title">How I work</h2>
+      </div>
+      <div class="skills-grid">
+        <div><h3>Data preparation</h3><p>Python, pandas and SQL for combining datasets, checking units and cleaning records.</p></div>
+        <div><h3>Machine learning</h3><p>scikit-learn for exploring patterns, comparing methods and assessing where results may break down.</p></div>
+        <div><h3>Reporting</h3><p>Power BI, Tableau and Excel for presenting trends and explaining how the numbers support a decision.</p></div>
+        <div><h3>Collaboration</h3><p>Client questions, progress updates, Git and GitHub for agreeing on requirements and sharing work.</p></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" id="contact">
+    <div class="shell">
+      <div class="footer-main">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Let’s connect</h2>
+          <p>Based in Edmonton, Alberta.</p>
+        </div>
+        <div class="actions">
+          <a class="button primary" href="mailto:osaretincontact@gmail.com">Email me</a>
+          <a class="button secondary" href="https://www.linkedin.com/in/osaretin-ogbebor-117a4a26a/">LinkedIn</a>
+          <a class="button secondary" href="https://github.com/osaretinogb">GitHub</a>
+        </div>
+      </div>
+      <div class="footer-note">
+        <span>© 2026 Osaretin Ogbebor</span>
+        <p>ChatGPT helped redesign the layout, draft case-study copy from my project notes and generate a visual from the public Iris dataset.</p>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
