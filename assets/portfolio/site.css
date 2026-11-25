@@ -216,7 +216,7 @@ nav a { color: var(--muted); font-size: .92rem; text-decoration: none; padding-b
 .section { padding-block: clamp(3.2rem, 6.8vw, 5.3rem); }
 .section-heading { margin-bottom: 1.35rem; }
 .section h2, .site-footer h2 { margin-top: .38rem; font-size: clamp(2rem, 4.4vw, 3.25rem); letter-spacing: -.045em; }
-.project-index { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; margin-bottom: 2.2rem; }
+.project-index { display: grid; grid-template-columns: repeat(auto-fit, minmax(185px, 1fr)); gap: .8rem; margin-bottom: 2.2rem; }
 .project-index a {
   display: grid;
   align-content: start;
